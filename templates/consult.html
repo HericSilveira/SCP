@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='consultstyle.css') }}">
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='InstitutoMix.png') }}" alt="Logo do Instituto Mix">
+        <div>
+            <h1>Olá {{ name }}</h1>
+            <a href="{{ url_for('RemoveSession') }}">Sair</a>
+        </div>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Patrimônio</th>
+                <th>Status</th>
+                <th>Ultima Manutenção</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for Item in Itens%}
+                <tr>
+                    <td>{{Item.id}}</td>
+                    <td>{{Item.name}}</td>
+
+                    {% if Item.status %}
+                        <td>Em Funcionamento</td>
+                    {% else %}
+                        <td>Fora de Serviço</td>
+                    {% endif%}
+
+                    {% if Item.repair %}
+                        <td>{{Item.repair}}</td>
+                    {% else %}
+                        <td></td>
+                    {% endif%}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>

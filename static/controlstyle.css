@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    color: #000000;
+    outline: none;
+}
+
+body{
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100dvh;
+}
+
+header{
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    width: 100%;
+    height: 15dvh;
+}
+
+header div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 1%;
+    padding-top: 3%;
+    width: 30%;
+    height: 100%;
+}
+
+header div a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 15%;
+    height: 50%;
+    background-color: #21ee4d;
+    border: 1px solid #000000;
+    transition: 200ms linear;
+}
+
+header div a:hover{
+    background-color: #186429;
+}
+
+header div h1{
+    color: #ffffff;
+    text-wrap: nowrap;
+    font-size: 3rem;
+}
+
+header img{
+    width: clamp(100px, 5dvw, 200px);
+}
+
+nav{
+    width: 100%;
+    height: 85dvh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a{
+    border: none;
+    width: 20%;
+    height: 40dvh;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 40px #000000;
+    border-radius: 20px;
+    transition: 200ms linear;
+}
+
+nav a h1{
+    color: #ffffff;
+    font-size: 3rem;
+}
+
+nav a:hover h1{
+    color: #000000;
+}
+
+nav a:hover{
+    cursor: pointer;
+    background-color: #25a741;
+    box-shadow: 0px 0px 10px #797979;
+}
+
+nav a:first-child:hover{
+    background-color: #2582a7;
+    box-shadow: 0px 0px 10px #797979;
+}
+
+nav a:last-child:hover{
+    background-color: #a72525;
+    box-shadow: 0px 0px 10px #797979;
+}
